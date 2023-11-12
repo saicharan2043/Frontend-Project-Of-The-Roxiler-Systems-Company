@@ -1,0 +1,113 @@
+.table-component-container {
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.heading-table {
+  font-family: Roboto;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.container-of-search-month {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 400px;
+  height: 45px;
+  border: 1px solid gray;
+  padding: 10px;
+  padding-left: 15px;
+  font-family: Roboto;
+  font-size: 15px;
+  color: gray;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+.month-options {
+  width: 400px;
+  height: 45px;
+  border: 1px solid gray;
+  padding: 10px;
+  padding-left: 15px;
+  font-family: Roboto;
+  font-size: 15px;
+  color: black;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  min-height: 60px;
+  max-height: 400px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  overflow: scroll;
+}
+
+th {
+  text-align: center;
+  border: 2px solid black;
+  height: 40px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+}
+
+td {
+  border: 2px solid black;
+  font-size: 13px;
+  padding: 10px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.previous-btn {
+  width: 40px;
+  height: 40px;
+  color: black;
+  cursor: pointer;
+}
+
+.page-no {
+  width: 60px;
+  height: 40px;
+  font-family: Roboto;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-btn {
+  width: 40px;
+  height: 40px;
+  color: black;
+  cursor: pointer;
+}
+
+.in-active {
+  color: gray;
+}

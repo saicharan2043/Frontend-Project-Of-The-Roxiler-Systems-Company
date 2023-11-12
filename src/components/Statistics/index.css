@@ -1,0 +1,48 @@
+.statistic-conainer {
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.heading-statistic-chart {
+  font-family: Roboto;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 30px;
+  align-self: flex-start;
+}
+
+.change-month-input-position {
+  align-self: flex-end;
+  margin-bottom: 50px;
+}
+
+.statistic-sub-container {
+  background-color: #fad369;
+  width: 50%;
+  height: 300px;
+  border-radius: 10px;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cantegory-container {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+
+.category-text {
+  font-family: Roboto;
+  font-size: 20px;
+  color: black;
+}

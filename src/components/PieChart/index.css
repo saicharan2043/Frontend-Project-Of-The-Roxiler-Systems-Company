@@ -1,0 +1,21 @@
+.pie-chart-conainer {
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.heading-pie-chart {
+  font-family: Roboto;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 30px;
+  align-self: flex-start;
+}
+
+.change-month-input-position {
+  align-self: flex-end;
+  margin-bottom: 50px;
+}
