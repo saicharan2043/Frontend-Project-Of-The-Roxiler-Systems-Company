@@ -5,10 +5,8 @@ import "./index.css";
 
 class Table extends Component {
   state = {
-    serachValue: "",
-    month: 3,
     pageNo: 1,
-    limit: 2,
+    limit: 5,
     tableData: [],
   };
 
@@ -16,28 +14,26 @@ class Table extends Component {
     this.getTableData();
   }
 
+  componentDidUpdate(prevProps) {
+    if (
+      this.props.searchValue !== prevProps.searchValue ||
+      this.props.month !== prevProps.month
+    ) {
+      this.getTableData();
+    }
+  }
+
   getTableData = async () => {
-    const { serachValue, month, pageNo, limit } = this.state;
+    const { pageNo, limit } = this.state;
+    const { searchValue, month } = this.props;
     const response = await fetch(
-      `https://backendassignment-co6p.onrender.com/getTableTransactions?search=${
-        serachValue.length === 0 ? "0" : serachValue
-      }&month=${month}&pageno=${pageNo}&limit=${limit}`
+      `https://backend-assignment-of-roxiler-systems.onrender.com/getTableTransactions?search=${searchValue}&month=${month}&pageno=${pageNo}&limit=${limit}`
     );
+
     if (response.ok) {
       const data = await response.json();
       this.setState({ tableData: data });
     }
-  };
-
-  changeSearchValue = (e) => {
-    this.setState(
-      { serachValue: e.target.value, pageNo: 1 },
-      this.getTableData
-    );
-  };
-
-  changeMonthsInTable = (e) => {
-    this.setState({ month: e.target.value, pageNo: 1 }, this.getTableData);
   };
 
   clickLeftArrow = () => {
@@ -61,41 +57,14 @@ class Table extends Component {
   };
 
   render() {
-    const { serachValue, month, pageNo, tableData, limit } = this.state;
+    const { pageNo, tableData, limit } = this.state;
     let isNxtInActive = "";
     if (tableData.length === 0 || tableData.length < limit) {
       isNxtInActive = "in-active";
     }
     return (
       <div className="table-component-container">
-        <h1 className="heading-table">All Transctions Table</h1>
-        <div className="container-of-search-month">
-          <input
-            type="search"
-            placeholder="search"
-            className="search-input"
-            onChange={this.changeSearchValue}
-            value={serachValue}
-          />
-          <select
-            className="month-options"
-            onChange={this.changeMonthsInTable}
-            value={month}
-          >
-            <option value={1}>Jan</option>
-            <option value={2}>Feb</option>
-            <option value={3}>Mar</option>
-            <option value={4}>Apr</option>
-            <option value={5}>May</option>
-            <option value={6}>June</option>
-            <option value={7}>July</option>
-            <option value={8}>Aug</option>
-            <option value={9}>Sept</option>
-            <option value={10}>Oct</option>
-            <option value={11}>Nov</option>
-            <option value={12}>Dec</option>
-          </select>
-        </div>
+        <h1 className="heading-in-table">Table</h1>
         <table>
           <thead>
             <tr>

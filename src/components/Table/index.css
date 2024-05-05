@@ -6,48 +6,13 @@
   margin-top: 30px;
 }
 
-.heading-table {
+.heading-in-table {
   font-family: Roboto;
   font-size: 35px;
   color: black;
   font-weight: bold;
   margin-bottom: 30px;
-}
-
-.container-of-search-month {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.search-input {
-  width: 400px;
-  height: 45px;
-  border: 1px solid gray;
-  padding: 10px;
-  padding-left: 15px;
-  font-family: Roboto;
-  font-size: 15px;
-  color: gray;
-  border-radius: 8px;
-  outline: none;
-  cursor: pointer;
-}
-
-.month-options {
-  width: 400px;
-  height: 45px;
-  border: 1px solid gray;
-  padding: 10px;
-  padding-left: 15px;
-  font-family: Roboto;
-  font-size: 15px;
-  color: black;
-  border-radius: 8px;
-  outline: none;
-  cursor: pointer;
+  align-self: flex-start;
 }
 
 table {
